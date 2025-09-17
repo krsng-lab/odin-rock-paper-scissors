@@ -23,20 +23,26 @@ function getComputerChoice() {
 function getHumanChoice() {
     let choice = prompt("Choose either 'rock', 'paper' or 'scissors'.");
 }
-// Declare function playRound() that plays a single round
-    // Read humanChoice and computerChoice
-        // Set parameters to be case-insensitive
-    // If computerChoice beats humanChoice then
-        // Display message
-        // Increment computer score
-    // Elif tie then
-        // Display message
-        // Scores are unchanged
-    // Else humanChoice beats computerChoice then
-        // Display message
-        // Increment human score
-    // Endif
-function playRound(originalHumanChoice, originalComputerChoice) {
+// Declare function playGame() that starts the game
+    // Declare function playRound() that plays a single round
+        // Read humanChoice and computerChoice
+            // Set parameters to be case-insensitive
+        // If computerChoice beats humanChoice then
+            // Display message
+            // Increment computer score
+        // Elif tie then
+            // Display message
+            // Scores are unchanged
+        // Else humanChoice beats computerChoice then
+            // Display message
+            // Increment human score
+        // Endif
+    // Create variables humanSelection and computerSelection 
+        // Initialise variables with getHumanChoice() and getComputerChoice() respectively
+    // Pass the variables as parameters to playRound()
+    // Repeat playRound() until it has been run 5 times
+function playGame() {
+    function playRound(originalHumanChoice, originalComputerChoice) {
     let humanChoice = originalHumanChoice.toLowerCase();
     let computerChoice = originalComputerChoice.toLowerCase();
     if (humanChoice == "rock" && computerChoice == "paper" || 
@@ -53,10 +59,9 @@ function playRound(originalHumanChoice, originalComputerChoice) {
         humanChoice++;
     }
 }
-// Execute playRound() on runtime
-    // Create variables humanSelection and computerSelection 
-        // Initialise variables with getHumanChoice() and getComputerChoice() respectively
-    // Pass the variables as parameters to playRound()
-const humanSelection = getHumanChoice();
-const computerSelection = getComputerChoice();
-playRound(humanSelection, computerSelection);
+    const humanSelection = getHumanChoice();
+    const computerSelection = getComputerChoice();
+    for (let i = 0; i < 4; i++) {
+        playRound(humanSelection, computerSelection);
+    }
+}
