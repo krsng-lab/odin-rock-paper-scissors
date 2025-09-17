@@ -1,4 +1,4 @@
-// Initialise variables to keep track of scores
+// Create and initialise variables to keep track of scores
 let humanScore = 0;
 let computerScore = 0; 
 
@@ -23,4 +23,33 @@ function getComputerChoice() {
     // Initialise a constant 'choice'
 function getHumanChoice() {
     let choice = prompt("Choose either 'rock', 'paper' or 'scissors'.");
+}
+
+// Declare function playRound() that plays a single round
+    // Read humanChoice and computerChoice
+        // Set parameters to be case-insensitive
+    // If computerChoice beats humanChoice then
+        // Display message
+        // Increment computer score
+    // Elif tie then
+        // Display message
+        // Scores are unchanged
+    // Else humanChoice beats computerChoice then
+        // Display message
+        // Increment human score
+    // Endif
+function playRound(humanChoice, computerChoice) {
+    if (humanChoice == "rock" && computerChoice == "paper" || 
+        humanChoice == "paper" && computerChoice == "scissors" || 
+        humanChoice == "scissors" && computerChoice == "rock") {
+        console.log(`You lose! ${computerChoice} beats ${humanChoice}.`);
+        computerChoice++;
+    }
+    else if (humanChoice == computerChoice) {
+        console.log("Tie!");
+    }
+    else {
+        console.log(`You win! ${humanChoice} beats ${computerChoice}.`);
+        humanChoice++;
+    }
 }
