@@ -59,9 +59,9 @@ function playGame() {
             humanChoice++;
         }
 }
-    const humanSelection = getHumanChoice();
-    const computerSelection = getComputerChoice();
-    for (let i = 0; i < 4; i++) {
+    for (let i = 0; i <= 4; i++) {
+        const humanSelection = getHumanChoice();
+        const computerSelection = getComputerChoice();
         playRound(humanSelection, computerSelection);
     }
 }
