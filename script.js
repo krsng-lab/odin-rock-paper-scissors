@@ -21,7 +21,7 @@ function getComputerChoice() {
         // Assume user inputs valid choice
     // Initialise a constant 'choice'
 function getHumanChoice() {
-    let choice = prompt("Choose either 'rock', 'paper' or 'scissors'.");
+    return choice = prompt("Choose either 'rock', 'paper' or 'scissors'.");
 }
 // Declare function playGame() that starts the game
     // Declare function playRound() that plays a single round
@@ -43,21 +43,21 @@ function getHumanChoice() {
     // Repeat playRound() until it has been run 5 times
 function playGame() {
     function playRound(originalHumanChoice, originalComputerChoice) {
-    let humanChoice = originalHumanChoice.toLowerCase();
-    let computerChoice = originalComputerChoice.toLowerCase();
-    if (humanChoice == "rock" && computerChoice == "paper" || 
-        humanChoice == "paper" && computerChoice == "scissors" || 
-        humanChoice == "scissors" && computerChoice == "rock") {
-        console.log(`You lose! As ${computerChoice} beats ${humanChoice}.`);
-        computerChoice++;
-    }
-    else if (humanChoice == computerChoice) {
-        console.log("Tie!");
-    }
-    else {
-        console.log(`You win! As ${humanChoice} beats ${computerChoice}.`);
-        humanChoice++;
-    }
+        let humanChoice = originalHumanChoice.toLowerCase();
+        let computerChoice = originalComputerChoice.toLowerCase();
+        if (humanChoice == "rock" && computerChoice == "paper" || 
+            humanChoice == "paper" && computerChoice == "scissors" || 
+            humanChoice == "scissors" && computerChoice == "rock") {
+            console.log(`You lose! As ${computerChoice} beats ${humanChoice}.`);
+            computerChoice++;
+        }
+        else if (humanChoice == computerChoice) {
+            console.log("Tie!");
+        }
+        else {
+            console.log(`You win! As ${humanChoice} beats ${computerChoice}.`);
+            humanChoice++;
+        }
 }
     const humanSelection = getHumanChoice();
     const computerSelection = getComputerChoice();
