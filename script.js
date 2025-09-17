@@ -38,18 +38,20 @@ function getHumanChoice() {
         // Display message
         // Increment human score
     // Endif
-function playRound(humanChoice, computerChoice) {
+function playRound(originalHumanChoice, originalComputerChoice) {
+    let humanChoice = originalHumanChoice.toLowerCase();
+    let computerChoice = originalComputerChoice.toLowerCase();
     if (humanChoice == "rock" && computerChoice == "paper" || 
         humanChoice == "paper" && computerChoice == "scissors" || 
         humanChoice == "scissors" && computerChoice == "rock") {
-        console.log(`You lose! ${computerChoice} beats ${humanChoice}.`);
+        console.log(`You lose! As ${computerChoice} beats ${humanChoice}.`);
         computerChoice++;
     }
     else if (humanChoice == computerChoice) {
         console.log("Tie!");
     }
     else {
-        console.log(`You win! ${humanChoice} beats ${computerChoice}.`);
+        console.log(`You win! As ${humanChoice} beats ${computerChoice}.`);
         humanChoice++;
     }
 }
