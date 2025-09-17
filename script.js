@@ -1,7 +1,6 @@
 // Create and initialise variables to keep track of scores
 let humanScore = 0;
 let computerScore = 0; 
-
 // Declare function getComputerChoice()
     // Compute random value of either "rock", "paper" or "scissors"
     // Return the value
@@ -24,7 +23,6 @@ function getComputerChoice() {
 function getHumanChoice() {
     let choice = prompt("Choose either 'rock', 'paper' or 'scissors'.");
 }
-
 // Declare function playRound() that plays a single round
     // Read humanChoice and computerChoice
         // Set parameters to be case-insensitive
@@ -55,3 +53,10 @@ function playRound(originalHumanChoice, originalComputerChoice) {
         humanChoice++;
     }
 }
+// Execute playRound() on runtime
+    // Create variables humanSelection and computerSelection 
+        // Initialise variables with getHumanChoice() and getComputerChoice() respectively
+    // Pass the variables as parameters to playRound()
+const humanSelection = getHumanChoice();
+const computerSelection = getComputerChoice();
+playRound(humanSelection, computerSelection);
