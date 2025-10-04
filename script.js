@@ -28,13 +28,10 @@
         // Read humanChoice and computerChoice
             // Set parameters to be case-insensitive
         // If computerChoice beats humanChoice then
-            // Display message
             // Increment computer score
         // Elif tie then
-            // Display message
             // Scores are unchanged
         // Else humanChoice beats computerChoice then
-            // Display message
             // Increment human score
         // Endif
 // function playGame() {
@@ -60,11 +57,11 @@ const buttons = document.querySelectorAll("button");
 buttons.forEach((button) => {
     button.addEventListener("click", () => {
         if (button.id = "rock") {
-            playRound();
+            playRound("rock");
         }
         else if (button.id ="paper") {
-            playRound();
+            playRound("paper");
         }
-        else playRound();
+        else playRound("scissors");
     });
 });
