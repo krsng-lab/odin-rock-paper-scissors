@@ -1,3 +1,2 @@
 # odin-rock-paper-scissors
-Try it for yourself! 
-Enter `playGame()` in the console to start.
+[Try][https://krsng-lab.github.io/odin-rock-paper-scissors/] it for yourself! 
