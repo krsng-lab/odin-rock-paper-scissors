@@ -28,19 +28,21 @@ function getComputerChoice() {
     // Else humanChoice beats computerChoice then
         // Increment human score
     // Endif
+
+const results = document.getElementById("results");
         
 function playRound(humanChoice, computerChoice) {
     if (humanChoice == "rock" && computerChoice == "paper" || 
         humanChoice == "paper" && computerChoice == "scissors" || 
         humanChoice == "scissors" && computerChoice == "rock") {
-        console.log(`You lose! As ${computerChoice} beats ${humanChoice}.`);
+        results.textContent = `You lose! As ${computerChoice} beats ${humanChoice}.`;
         computerScore++;
     }
     else if (humanChoice == computerChoice) {
-        console.log("Tie!");
+        results.textContent = "Tie!";
     }
     else {
-        console.log(`You win! As ${humanChoice} beats ${computerChoice}.`);
+        results.textContent = `You win! As ${humanChoice} beats ${computerChoice}.`;
         humanScore++;
     }
 }
