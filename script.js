@@ -48,19 +48,8 @@ function playRound(humanChoice, computerChoice) {
 const buttons = document.querySelectorAll("button");
 buttons.forEach((button) => {
     button.addEventListener("click", () => {
-        if (button.id = "rock") {
-            let humanChoice = "rock";
-            let computerChoice = getComputerChoice();
-            playRound(humanChoice, computerChoice);
-        }
-        else if (button.id ="paper") {
-            let humanChoice = "paper";
-            let computerChoice = getComputerChoice();
-            playRound(humanChoice, computerChoice);
-        }
-        else {
-            let humanChoice = "scissors";
-            let computerChoice = getComputerChoice();
-            playRound(humanChoice, computerChoice);
-    }});
+        const humanChoice = button.id;
+        const computerChoice = getComputerChoice();
+        playRound(humanChoice, computerChoice);
+    });
 });
