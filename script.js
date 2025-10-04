@@ -34,24 +34,23 @@
         // Else humanChoice beats computerChoice then
             // Increment human score
         // Endif
-// function playGame() {
-//     function playRound(originalHumanChoice, originalComputerChoice) {
-//         let humanChoice = originalHumanChoice.toLowerCase();
-//         let computerChoice = originalComputerChoice.toLowerCase();
-//         if (humanChoice == "rock" && computerChoice == "paper" || 
-//             humanChoice == "paper" && computerChoice == "scissors" || 
-//             humanChoice == "scissors" && computerChoice == "rock") {
-//             console.log(`You lose! As ${computerChoice} beats ${humanChoice}.`);
-//             computerChoice++;
-//         }
-//         else if (humanChoice == computerChoice) {
-//             console.log("Tie!");
-//         }
-//         else {
-//             console.log(`You win! As ${humanChoice} beats ${computerChoice}.`);
-//             humanChoice++;
-//         }
-// }}
+        
+function playGame() {
+    function playRound(humanChoice, computerChoice) {
+        if (humanChoice == "rock" && computerChoice == "paper" || 
+            humanChoice == "paper" && computerChoice == "scissors" || 
+            humanChoice == "scissors" && computerChoice == "rock") {
+            console.log(`You lose! As ${computerChoice} beats ${humanChoice}.`);
+            computerChoice++;
+        }
+        else if (humanChoice == computerChoice) {
+            console.log("Tie!");
+        }
+        else {
+            console.log(`You win! As ${humanChoice} beats ${computerChoice}.`);
+            humanChoice++;
+        }
+}}
 
 const buttons = document.querySelectorAll("button");
 buttons.forEach((button) => {
