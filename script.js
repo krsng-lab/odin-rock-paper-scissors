@@ -18,7 +18,6 @@ function getComputerChoice() {
     }
 }
 
-
 // Declare function playRound() that plays a single round
     // Read humanChoice and computerChoice
         // Set parameters to be case-insensitive
@@ -30,33 +29,38 @@ function getComputerChoice() {
         // Increment human score
     // Endif
         
-
 function playRound(humanChoice, computerChoice) {
     if (humanChoice == "rock" && computerChoice == "paper" || 
         humanChoice == "paper" && computerChoice == "scissors" || 
         humanChoice == "scissors" && computerChoice == "rock") {
         console.log(`You lose! As ${computerChoice} beats ${humanChoice}.`);
-        computerChoice++;
+        computerScore++;
     }
     else if (humanChoice == computerChoice) {
         console.log("Tie!");
     }
     else {
         console.log(`You win! As ${humanChoice} beats ${computerChoice}.`);
-        humanChoice++;
+        humanScore++;
     }
 }
 
 const buttons = document.querySelectorAll("button");
 buttons.forEach((button) => {
     button.addEventListener("click", () => {
-        computerChoice = getComputerChoice();
         if (button.id = "rock") {
-            playRound("rock", getComputerChoice());
+            let humanChoice = "rock";
+            let computerChoice = getComputerChoice();
+            playRound(humanChoice, computerChoice);
         }
         else if (button.id ="paper") {
-            playRound("paper", getComputerChoice());
+            let humanChoice = "paper";
+            let computerChoice = getComputerChoice();
+            playRound(humanChoice, computerChoice);
         }
-        else playRound("scissors", getComputerChoice());
-    });
+        else {
+            let humanChoice = "scissors";
+            let computerChoice = getComputerChoice();
+            playRound(humanChoice, computerChoice);
+    }});
 });
