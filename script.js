@@ -30,6 +30,7 @@ function getComputerChoice() {
     // Endif
 
 const results = document.getElementById("results");
+const scoreboard = document.getElementById("scoreboard");
         
 function playRound(humanChoice, computerChoice) {
     if (humanChoice == "rock" && computerChoice == "paper" || 
@@ -37,13 +38,16 @@ function playRound(humanChoice, computerChoice) {
         humanChoice == "scissors" && computerChoice == "rock") {
         results.textContent = `You lose! As ${computerChoice} beats ${humanChoice}.`;
         computerScore++;
+        scoreboard.textContent = `Human: ${humanScore} | Computer: ${computerScore}`;
     }
     else if (humanChoice == computerChoice) {
         results.textContent = "Tie!";
+        scoreboard.textContent = `Human: ${humanScore} | Computer: ${computerScore}`;
     }
     else {
         results.textContent = `You win! As ${humanChoice} beats ${computerChoice}.`;
         humanScore++;
+        scoreboard.textContent = `Human: ${humanScore} | Computer: ${computerScore}`;
     }
 }
 
