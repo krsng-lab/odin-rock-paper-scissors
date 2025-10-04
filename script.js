@@ -37,10 +37,6 @@ function getHumanChoice() {
             // Display message
             // Increment human score
         // Endif
-    // Create variables humanSelection and computerSelection 
-        // Initialise variables with getHumanChoice() and getComputerChoice() respectively
-    // Pass the variables as parameters to playRound()
-    // Repeat playRound() until it has been run 5 times
 function playGame() {
     function playRound(originalHumanChoice, originalComputerChoice) {
         let humanChoice = originalHumanChoice.toLowerCase();
@@ -58,10 +54,4 @@ function playGame() {
             console.log(`You win! As ${humanChoice} beats ${computerChoice}.`);
             humanChoice++;
         }
-}
-    for (let i = 0; i <= 4; i++) {
-        const humanSelection = getHumanChoice();
-        const computerSelection = getComputerChoice();
-        playRound(humanSelection, computerSelection);
-    }
-}
+}}
