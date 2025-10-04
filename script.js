@@ -33,21 +33,29 @@ const results = document.getElementById("results");
 const scoreboard = document.getElementById("scoreboard");
         
 function playRound(humanChoice, computerChoice) {
-    if (humanChoice == "rock" && computerChoice == "paper" || 
-        humanChoice == "paper" && computerChoice == "scissors" || 
-        humanChoice == "scissors" && computerChoice == "rock") {
-        results.textContent = `You lose! As ${computerChoice} beats ${humanChoice}.`;
-        computerScore++;
+    if (humanScore === 5) {
+        results.textContent = "You win!"
         scoreboard.textContent = `Human: ${humanScore} | Computer: ${computerScore}`;
-    }
-    else if (humanChoice == computerChoice) {
-        results.textContent = "Tie!";
+    } else if (computerScore === 5) {
+        results.textContent = "Computers win!"
         scoreboard.textContent = `Human: ${humanScore} | Computer: ${computerScore}`;
-    }
-    else {
-        results.textContent = `You win! As ${humanChoice} beats ${computerChoice}.`;
-        humanScore++;
-        scoreboard.textContent = `Human: ${humanScore} | Computer: ${computerScore}`;
+    } else {
+        if (humanChoice == "rock" && computerChoice == "paper" || 
+            humanChoice == "paper" && computerChoice == "scissors" || 
+            humanChoice == "scissors" && computerChoice == "rock") {
+            results.textContent = `You lose! As ${computerChoice} beats ${humanChoice}.`;
+            computerScore++;
+            scoreboard.textContent = `Human: ${humanScore} | Computer: ${computerScore}`;
+        }
+        else if (humanChoice == computerChoice) {
+            results.textContent = "Tie!";
+            scoreboard.textContent = `Human: ${humanScore} | Computer: ${computerScore}`;
+        }
+        else {
+            results.textContent = `You win! As ${humanChoice} beats ${computerChoice}.`;
+            humanScore++;
+            scoreboard.textContent = `Human: ${humanScore} | Computer: ${computerScore}`;
+        }
     }
 }
 
